@@ -9,5 +9,5 @@ import (
 
 func TestRun(t *testing.T) {
 	err := app.Run()
-	assert.NoError(t, err)
+	assert.True(t, err != nil)
 }
