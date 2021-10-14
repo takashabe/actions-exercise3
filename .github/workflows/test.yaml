@@ -1,0 +1,18 @@
+name: test
+
+on:
+  push:
+    paths:
+    - 'src/app/**'
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Setup Go
+      uses: actions/setup-go@v2
+      with:
+        go-version: '1.17.1'
+    - name: Run testing
+      run: |
+        go test ./...
