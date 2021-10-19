@@ -1,5 +1,7 @@
 package app
 
+import "errors"
+
 func Run() error {
-	return nil
+	return errors.New("aaa")
 }
